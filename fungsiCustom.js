@@ -39,7 +39,7 @@ const bacaData = (fnCallback) => {
         let jsonFile2 = JSON.parse(data2);
         let jsonFile3 = JSON.parse(data3);
 
-        let splitFile1 = jsonFile1data.toString().split(' ')[1];
+        let splitFile1 = jsonFile1.toString().split(' ')[1];
         let splitFile2 = jsonFile2.toString().split(' ')[1];
         let splitFile3 = jsonFile3.toString().split(' ')[1];
 
