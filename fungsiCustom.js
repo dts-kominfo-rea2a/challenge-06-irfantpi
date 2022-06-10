@@ -19,10 +19,11 @@ let modifyFile3 = (val) => {
 // TODO: Kerjakan bacaData
 // gunakan variabel file1, file2, dan file3
 
-const fs = require('fs');
-hasilData = [];
-
 const bacaData = (fnCallback) => {
+  
+  const fs = require('fs');
+  hasilData = [];
+
   fs.readFile(file1, 'utf8', (err, data1) => {
     if(err){
       return console.log ('error data 1' + err);
@@ -39,12 +40,10 @@ const bacaData = (fnCallback) => {
         let jsonFile2 = JSON.parse(data2);
         let jsonFile3 = JSON.parse(data3);
 
-        let splitFile1 = jsonFile1.toString().split(' ')[1];
-        let splitFile2 = jsonFile2.toString().split(' ')[1];
-        let splitFile3 = jsonFile3.toString().split(' ')[1];
-
-        hasilData.push(splitFile1, splitFile2, splitFile3);
-    
+        hasilData.push(jsonFile1.toString().split(' ')[1]);
+        hasilData.push(jsonFile2.toString().split(' ')[1]);
+        hasilData.push(jsonFile3.toString().split(' ')[1]);
+        
         fnCallback(err, hasilData);
       });
     });
