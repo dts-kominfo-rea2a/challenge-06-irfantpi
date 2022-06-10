@@ -40,9 +40,9 @@ const bacaData = (fnCallback) => {
         let jsonFile2 = JSON.parse(data2);
         let jsonFile3 = JSON.parse(data3);
 
-        hasilData.push(jsonFile1.toString().split(' ')[1]);
-        hasilData.push(jsonFile2.toString().split(' ')[1]);
-        hasilData.push(jsonFile3.toString().split(' ')[1]);
+        hasilData.push(jsonFile1.message.split(' ')[1]);
+        hasilData.push(jsonFile2[0].message.split(' ')[1]);
+        hasilData.push(jsonFile3[0].data.message.split(' ')[1]);
         
         fnCallback(err, hasilData);
       });
